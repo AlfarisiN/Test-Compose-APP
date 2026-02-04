@@ -5,7 +5,7 @@ import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
 
-interface AuthApi {
+interface ApiServices {
 
     @FormUrlEncoded
     @POST("login/v2")
@@ -14,5 +14,11 @@ interface AuthApi {
         @Field("password") password : String,
         @Field("app") app : String
     ) : ResponseLogin
+
+//    @FormUrlEncoded
+//    @POST("userprofile")
+//    suspend fun profile(
+//        @Field("username") username : String
+//    ) :
 
 }
